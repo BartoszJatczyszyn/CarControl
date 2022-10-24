@@ -42,23 +42,23 @@ public class MainActivity extends AppCompatActivity {
                 String confirm_password = et_cpassword.getText().toString();
 
                 if(username.equals("") || password.equals("") || confirm_password.equals("")){
-                    Toast.makeText(getApplicationContext(), "Fields Required", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Zostało puste pole", Toast.LENGTH_SHORT).show();
                 }else{
                     if(password.equals(confirm_password)){
-                        Boolean checkusername = databaseHelper.CheckUsername(username);
-                        if(checkusername == true){
+                        Boolean checkUsername = databaseHelper.CheckUsername(username);
+                        if(checkUsername == true){
                             Boolean insert = databaseHelper.Insert(username, password);
                             if(insert == true){
-                                Toast.makeText(getApplicationContext(), "Registered", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Zarejestrowano", Toast.LENGTH_SHORT).show();
                                 et_username.setText("");
                                 et_password.setText("");
                                 et_cpassword.setText("");
                             }
                         }else{
-                            Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Nazwa użytkownika jest już zajęta", Toast.LENGTH_SHORT).show();
                         }
                     }else{
-                        Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Hasło nie pasuje", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
