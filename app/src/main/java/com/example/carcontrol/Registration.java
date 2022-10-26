@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
     DatabaseHelper databaseHelper;
 
     EditText et_username, et_password, et_cpassword;
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_registration);
 
         databaseHelper = new DatabaseHelper(this);
         et_username = (EditText)findViewById(R.id.et_username);
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Login.class);
+                Intent intent = new Intent(Registration.this, Login.class);
                 startActivity(intent);
             }
         });
@@ -49,10 +49,11 @@ public class MainActivity extends AppCompatActivity {
                         if(checkUsername == true){
                             Boolean insert = databaseHelper.Insert(username, password);
                             if(insert == true){
-                                Toast.makeText(getApplicationContext(), "Zarejestrowano", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Zarejestrowano i zalogowano", Toast.LENGTH_SHORT).show();
                                 et_username.setText("");
                                 et_password.setText("");
                                 et_cpassword.setText("");
+                                openHome();
                             }
                         }else{
                             Toast.makeText(getApplicationContext(), "Nazwa użytkownika jest już zajęta", Toast.LENGTH_SHORT).show();
@@ -63,5 +64,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+    public void openHome() {
+        Intent intent=new Intent(this, Home.class);
+        startActivity(intent);
     }
 }
