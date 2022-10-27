@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 public class Login extends AppCompatActivity {
     Button btn_register, btn_login;
     EditText btn_username, btn_password;
