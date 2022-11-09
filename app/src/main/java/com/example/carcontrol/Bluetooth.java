@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,8 +29,6 @@ public class Bluetooth extends AppCompatActivity {
 
     BluetoothAdapter bluetoothAdapter;
 
-    DatabaseHelper databaseHelper;
-
     private static final int Request_Enable = 0;
     private static final int Request_Discover = 1;
 
@@ -37,8 +36,6 @@ public class Bluetooth extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
-
-        databaseHelper = new DatabaseHelper(this);
 
         btn_turnOn = (Button) findViewById(R.id.btn_turnOn);
         btn_turnOff = (Button) findViewById(R.id.btn_turnOff);
@@ -62,10 +59,10 @@ public class Bluetooth extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!bluetoothAdapter.isEnabled()) {
-                    Toast.makeText(Bluetooth.this, "Włącz bluetooth", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                     startActivityForResult(intent, Request_Enable);
                     bluetooth.setImageResource(R.drawable.ic_bluetooth_connected);
+                    Toast.makeText(Bluetooth.this, "Bluetooth włączone", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(Bluetooth.this, "Już włączone", Toast.LENGTH_SHORT).show();
@@ -78,9 +75,9 @@ public class Bluetooth extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!bluetoothAdapter.isDiscovering()){
-                    Toast.makeText(Bluetooth.this, "Włącz widoczność", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
                     startActivityForResult(intent, Request_Discover);
+                    Toast.makeText(Bluetooth.this, "Włącz widoczność", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -91,8 +88,8 @@ public class Bluetooth extends AppCompatActivity {
             public void onClick(View v) {
                 if(bluetoothAdapter.isEnabled()){
                     bluetoothAdapter.disable();
-                    Toast.makeText(Bluetooth.this, "Wyłącz", Toast.LENGTH_SHORT).show();
                     bluetooth.setImageResource((R.drawable.ic_bluetooth_disabled));
+                    Toast.makeText(Bluetooth.this, "Wyłącz", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Toast.makeText(Bluetooth.this, "Już wyłączone", Toast.LENGTH_SHORT).show();

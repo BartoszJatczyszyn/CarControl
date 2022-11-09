@@ -12,7 +12,7 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:background="@color/material_dynamic_primary50">
+        android:background="@color/teal_200">
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,24 +62,26 @@
 
     <Button
         android:id="@+id/btn_register"
-        android:backgroundTint="@color/material_dynamic_primary50"
+        android:backgroundTint="#00320B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="65dp"
         android:ems="10"
         android:text="Zarejestruj"
+        android:textColor="@color/white"
         android:layout_below="@+id/et_cpassword" />
 
     <Button
         android:id="@+id/btn_login"
-        android:backgroundTint="@color/material_dynamic_primary50"
+        android:backgroundTint="@color/teal_200"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="100dp"
         android:text="Zaloguj się"
+        android:textColor="@color/white"
         android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

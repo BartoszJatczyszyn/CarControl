@@ -12,7 +12,7 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:gravity="center"
-        android:background="@color/material_dynamic_primary50">
+        android:background="@color/teal_200">
 
         <TextView
             android:layout_width="wrap_content"
@@ -20,6 +20,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:text="Bluetooth"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -28,8 +29,9 @@
             android:id="@+id/btn_logout"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="350dp"
+            android:layout_marginLeft="320dp"
             android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/teal_200"
             android:drawableLeft="@drawable/ic_logout"/>
     </RelativeLayout>
 
@@ -43,12 +45,13 @@
 
     <Button
         android:id="@+id/btn_turnOn"
-        android:layout_width="150dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
-        android:layout_marginLeft="50dp"
-        android:backgroundTint="#178720"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#00320B"
         android:text="Włącz"
+        android:textColor="@color/white"
         android:textSize="20sp"/>
 
     <Button
@@ -57,18 +60,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="350dp"
         android:layout_marginLeft="220dp"
-        android:backgroundTint="#9A0404"
+        android:backgroundTint="#6E0000"
         android:text="Wyłącz"
+        android:textColor="@color/white"
         android:textSize="20sp"/>
 
     <Button
         android:id="@+id/btn_discoverable"
-        android:layout_width="150dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
-        android:layout_marginLeft="50dp"
-        android:backgroundTint="#A5774F"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="#78583C"
         android:text="Widoczny"
+        android:textColor="@color/white"
         android:textSize="20sp"/>
 
     <Button
@@ -77,8 +82,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:layout_marginLeft="220dp"
-        android:backgroundTint="#2354A1"
+        android:backgroundTint="#123873"
         android:text="Połącz"
+        android:textColor="@color/white"
         android:textSize="20sp"/>
 
     <TextView
