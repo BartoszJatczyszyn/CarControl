@@ -18,6 +18,7 @@ public class Windows extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_windows);
 
+        btn_logout= (Button)findViewById(R.id.btn_logout);
         btn_front_left_up = (Button)findViewById(R.id.btn_front_left_up);
         btn_front_left_down = (Button)findViewById(R.id.btn_front_left_down);
         btn_front_right_up = (Button)findViewById(R.id.btn_front_right_up);
