@@ -33,7 +33,85 @@
             android:layout_marginLeft="320dp"
             android:backgroundTint="@color/teal_200"
             android:drawableLeft="@drawable/ic_logout"/>
-
-
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/lights_front"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:src="@drawable/lights_front" />
+
+    <ImageView
+        android:id="@+id/lights_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/lights_back" />
+
+    <Button
+        android:id="@+id/btn_light_long"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="265dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/car_lights_main_beam"
+        android:paddingLeft="40dp" />
+
+    <Button
+        android:id="@+id/btn_light_parking"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/car_lights_parking"
+        android:paddingLeft="40dp"
+        />
+    <Button
+        android:id="@+id/btn_light_short"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="300dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/car_lights_dipped_beam"
+        android:paddingLeft="40dp"
+        />
+
+    <Button
+        android:id="@+id/btn_left_direction"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="350dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_back_24"
+        android:paddingLeft="70dp" />
+
+    <Button
+        android:id="@+id/btn_right_direction"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="350dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_forward_24"
+        android:paddingLeft="70dp" />
+
+    <Button
+        android:id="@+id/btn_light_triangle"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="400dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/car_lights_triangle"
+        android:paddingLeft="160dp"
+        android:gravity="center"
+        />
 </RelativeLayout>

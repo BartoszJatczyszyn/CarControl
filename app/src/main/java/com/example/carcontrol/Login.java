@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     Button btn_register, btn_login;
-    EditText btn_username, btn_password;
+    EditText txt_username, txt_password;
 
     DatabaseHelper databaseHelper;
 
@@ -21,8 +21,8 @@ public class Login extends AppCompatActivity {
 
         databaseHelper = new DatabaseHelper(this);
 
-        btn_username = (EditText)findViewById(R.id.et_lusername);
-        btn_password = (EditText)findViewById(R.id.et_lpassword);
+        txt_username = (EditText)findViewById(R.id.et_lusername);
+        txt_password = (EditText)findViewById(R.id.et_lpassword);
 
         btn_login = (Button)findViewById(R.id.btn_llogin);
         btn_register = (Button)findViewById(R.id.btn_lregister);
@@ -38,10 +38,11 @@ public class Login extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = btn_username.getText().toString();
-                String password = btn_password.getText().toString();
+                String username = txt_username.getText().toString();
+                String password = txt_password.getText().toString();
 
                 Boolean checkLogin = databaseHelper.CheckLogin(username, password);
+
                 if(checkLogin == true){
                     Toast.makeText(getApplicationContext(), "Zalogowano", Toast.LENGTH_SHORT).show();
                     openHome();
