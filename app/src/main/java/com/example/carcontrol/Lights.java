@@ -1,18 +1,23 @@
 package com.example.carcontrol;
 
+
+import static com.example.carcontrol.Bluetooth.socket;
+
+import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
+import java.io.IOException;
 
 public class Lights extends AppCompatActivity {
 
+
     Button btn_logout, btn_light_long, btn_light_short, btn_light_triangle, btn_light_parking, btn_left_direction, btn_right_direction;
     ImageView lights_front, lights_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +43,22 @@ public class Lights extends AppCompatActivity {
         btn_light_long.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                try{
+                    socket.getOutputStream().write(1);
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
             }
         });
 
         btn_light_short.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                try{
+                    socket.getOutputStream().write(0);
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
             }
         });
 
