@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".Windows"
+    tools:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal_200"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Szyby"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:backgroundTint="@color/teal_200"
+            android:drawableLeft="@drawable/ic_logout" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="240dp"
+        android:layout_height="450dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:src="@drawable/car" />
+
+    <Button
+        android:id="@+id/btn_front_left_up"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="280dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_upward_24" />
+
+    <Button
+        android:id="@+id/btn_front_left_down"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="320dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_downward_24" />
+
+    <Button
+        android:id="@+id/btn_front_right_up"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="280dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_upward_24" />
+
+    <Button
+        android:id="@+id/btn_front_right_down"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="320dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_downward_24" />
+
+    <Button
+        android:id="@+id/btn_back_left_up"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="450dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_upward_24" />
+
+    <Button
+        android:id="@+id/btn_back_left_down"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="490dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_downward_24" />
+
+    <Button
+        android:id="@+id/btn_back_right_up"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="450dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_upward_24" />
+
+    <Button
+        android:id="@+id/btn_back_right_down"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="490dp"
+        android:backgroundTint="@color/teal_200"
+        android:drawableLeft="@drawable/ic_baseline_arrow_downward_24" />
+
+</RelativeLayout>
