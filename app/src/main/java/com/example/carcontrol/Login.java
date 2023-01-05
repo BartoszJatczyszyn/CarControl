@@ -8,10 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 public class Login extends AppCompatActivity {
-    Button btn_lregister, btn_llogin;
-    EditText et_lusername, et_lpassword;
+    Button btn_register, btn_login;
+    EditText txt_username, txt_password;
 
     DatabaseHelper databaseHelper;
 
@@ -22,34 +21,40 @@ public class Login extends AppCompatActivity {
 
         databaseHelper = new DatabaseHelper(this);
 
-        et_lusername = (EditText)findViewById(R.id.et_lusername);
-        et_lpassword = (EditText)findViewById(R.id.et_lpassword);
+        txt_username = (EditText)findViewById(R.id.et_lusername);
+        txt_password = (EditText)findViewById(R.id.et_lpassword);
 
-        btn_llogin = (Button)findViewById(R.id.btn_llogin);
-        btn_lregister = (Button)findViewById(R.id.btn_lregister);
+        btn_login = (Button)findViewById(R.id.btn_llogin);
+        btn_register = (Button)findViewById(R.id.btn_lregister);
 
-        btn_lregister.setOnClickListener(new View.OnClickListener() {
+        btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, MainActivity.class);
+                Intent intent = new Intent(Login.this, Registration.class);
                 startActivity(intent);
             }
         });
 
-        btn_llogin.setOnClickListener(new View.OnClickListener() {
+        btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = et_lusername.getText().toString();
-                String password = et_lpassword.getText().toString();
+                String username = txt_username.getText().toString();
+                String password = txt_password.getText().toString();
 
-                Boolean checklogin = databaseHelper.CheckLogin(username, password);
-                if(checklogin == true){
-                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                Boolean checkLogin = databaseHelper.CheckLogin(username, password);
+
+                if(checkLogin == true){
+                    Toast.makeText(getApplicationContext(), "Zalogowano", Toast.LENGTH_SHORT).show();
+                    openHome();
+
                 }else{
-                    Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Nieprawidłowe dane", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-
+    public void openHome() {
+        Intent intent=new Intent(this, Home.class);
+        startActivity(intent);
+    }
 }

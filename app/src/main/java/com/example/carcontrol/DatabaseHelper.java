@@ -4,8 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
-public class DatabaseHelper {
+public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "login.db";
 
 
@@ -20,7 +21,7 @@ public class DatabaseHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXIST user");
+        db.execSQL("DROP TABLE IF EXISTS user");
     }
 
     public boolean Insert(String username, String password){
@@ -56,3 +57,4 @@ public class DatabaseHelper {
         }
     }
 }
+
