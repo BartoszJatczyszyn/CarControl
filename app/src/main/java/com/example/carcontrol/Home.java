@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Home extends AppCompatActivity {
-    Button btn_logout, btn_bluetooth, btn_locks, btn_windows, btn_lights, btn_others;
+    Button btn_logout, btn_bluetooth, btn_onboardcomputer, btn_windows, btn_lights, btn_others;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class Home extends AppCompatActivity {
 
         btn_logout = (Button)findViewById(R.id.btn_logout);
         btn_bluetooth = (Button)findViewById(R.id.btn_bluetooth);
-        btn_locks = (Button)findViewById(R.id.btn_locks);
+        btn_onboardcomputer = (Button)findViewById(R.id.btn_onboardcomputer);
         btn_windows = (Button)findViewById(R.id.btn_windows);
         btn_lights = (Button)findViewById(R.id.btn_lights);
         btn_others = (Button)findViewById(R.id.btn_others);
@@ -43,10 +43,10 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        btn_locks.setOnClickListener(new View.OnClickListener(){
+        btn_onboardcomputer.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                locks();
+                onBoardComputer();
             }
         });
 
@@ -80,8 +80,8 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void locks() {
-        Intent intent=new Intent(this, Locks.class);
+    public void onBoardComputer() {
+        Intent intent=new Intent(this, OnBoardComputer.class);
         startActivity(intent);
     }
 

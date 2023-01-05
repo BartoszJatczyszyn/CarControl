@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Locks">
+    android:visibility="visible"
+    tools:context=".OnBoardComputer"
+    tools:visibility="visible">
 
     <RelativeLayout
         android:id="@+id/header"
@@ -22,7 +24,7 @@
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="5dp"
             android:layout_centerHorizontal="true"
-            android:text="Zamki"
+            android:text="Komputer pokładowy"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -36,4 +38,34 @@
 
 
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_up"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_200"
+        android:drawableTop="@drawable/ic_baseline_arrow_upward_100" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_200"
+        android:text="OK"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_down"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="460dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_200"
+        android:drawableBottom="@drawable/ic_baseline_arrow_downward_100" />
+
 </RelativeLayout>

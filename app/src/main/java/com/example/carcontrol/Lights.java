@@ -43,29 +43,18 @@ public class Lights extends AppCompatActivity {
         btn_light_long.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    socket.getOutputStream().write(1);
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
             }
         });
 
         btn_light_short.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
-                    socket.getOutputStream().write(0);
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
             }
         });
 
         btn_light_triangle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
             }
         });
 
